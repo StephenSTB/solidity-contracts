@@ -1,0 +1,17 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "truffle compile --config truffle-config.cjs"
+  },
+  "author": "StephenSTB",
+  "license": "MIT",
+  "devDependencies": {
+    "@openzeppelin/contracts": "^4.8.0"
+  },
+  "dependencies": {
+    "truffle-contract-size": "^2.0.1"
+  }
+}

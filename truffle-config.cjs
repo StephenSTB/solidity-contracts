@@ -34,6 +34,7 @@
  // const fs = require('fs');
  // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
+
  console.log(__dirname)
  
  module.exports = {
@@ -46,6 +47,7 @@
     *
     * $ truffle test --network <network-name>
     */
+   contracts_directory: "./contracts/uuid-connect",
  
    contracts_build_directory: path.join(__dirname, "../web3-data/contracts"),
  
@@ -132,19 +134,52 @@
    // Configure your compilers
    compilers: {
      solc: {
-        version: "0.8.17",    // Fetch exact version from solc-bin (default: truffle's version)
+        version: "0.8.0",    // Fetch exact version from solc-bin (default: truffle's version)
        // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
-       // settings: {          // See the solidity docs for advice about optimization and evmVersion
-       //  optimizer: {
-       //    enabled: false,
-       //    runs: 200
-       //  },
-       //  evmVersion: "byzantium"
+        settings: {          // See the solidity docs for advice about optimization and evmVersion
+
+          //viaIR: true,
+          optimizer: {
+            enabled: true,
+            //runs: 100,
+            /*
+            details : {
+              yul: true,
+              yulDetails:{
+                stackAllocation: true,
+                optimizerSteps: ""
+              }
+            }*/
+            
+          },
+          //evmVersion: "paris"
+        }
+       /*
+       "optimizer": {
+         "enabled": true,
+         "details": {
+           "peephole": false,
+           "inliner": false,
+           "jumpdestRemover": false,
+           "orderLiterals": false,
+           "deduplicate": false,
+           "cse": false,
+           "constantOptimizer": false,
+           "yul": true,
+           "yulDetails": {
+             "stackAllocation": false,
+             "optimizerSteps": ""
+           }
+         }
+       }*/
+      
+      
        // }
      }
    },
  
-   plugins: ["truffle-contract-size", 'truffle-flatten']
+   plugins: ["truffle-contract-size", 'truffle-flatten'],
+  
  
    // Truffle DB is currently disabled by default; to enable it, change enabled:
    // false to enabled: true. The default storage location can also be

@@ -1,4 +1,4 @@
-pragma solidity ^0.8.17 ;
+pragma solidity ^0.8.0 ;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/Address.sol";
 // SPDX-License-Identifier: MIT
 import "@openzeppelin/contracts/utils/cryptography/MerkleProof.sol";
 
-import "../../dapp/user-register/UserRegister.sol";
+import "../feed/user-register/UserRegister.sol";
 
 import "./nft-types/Asset.sol";
 

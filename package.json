@@ -9,9 +9,12 @@
   "author": "StephenSTB",
   "license": "MIT",
   "devDependencies": {
-    "@openzeppelin/contracts": "^4.8.0"
+    "@openzeppelin/contracts": "^4.9.3"
   },
   "dependencies": {
+    "@uniswap/sdk-core": "^4.0.1",
+    "solmate": "^6.2.0",
+    "truffle": "^5.11.5",
     "truffle-contract-size": "^2.0.1"
   }
 }

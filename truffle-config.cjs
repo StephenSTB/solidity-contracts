@@ -47,7 +47,7 @@
     *
     * $ truffle test --network <network-name>
     */
-   contracts_directory: "./contracts/uuid-connect",
+   contracts_directory: "./contracts/call/",
  
    contracts_build_directory: path.join(__dirname, "../web3-data/contracts"),
  
@@ -138,7 +138,7 @@
        // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
         settings: {          // See the solidity docs for advice about optimization and evmVersion
 
-          //viaIR: true,
+          ///viaIR: true,
           optimizer: {
             enabled: true,
             //runs: 100,

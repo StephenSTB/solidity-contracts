@@ -25,6 +25,14 @@ contract PublicKeys is Ownable{
         EnableHash = ECDSA.toEthSignedMessageHash(bytes("Enable Public Key."));
     }
 
+    function onlyRegistered(address _user) public view returns(bool){
+        if(SignKeys[_user].v != 0){
+            return true;
+        }
+        return false;
+       
+    }
+
     function register(bytes memory _signature) public{
 
         require(SignatureChecker.isValidSignatureNow(msg.sender, EnableHash, _signature), "Invalid Signature.");

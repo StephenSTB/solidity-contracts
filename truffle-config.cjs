@@ -47,7 +47,7 @@
     *
     * $ truffle test --network <network-name>
     */
-   contracts_directory: "./contracts/messages",
+   contracts_directory: "./contracts/following",
  
    contracts_build_directory: path.join(__dirname, "../web3-data/contracts"),
  
